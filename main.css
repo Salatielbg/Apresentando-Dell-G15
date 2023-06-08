@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+
+    
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 60%,rgb(70, 67, 67) 91%);
+}
+
+
+
+/*container*/
+.container{
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 60%,rgb(70, 67, 67) 91%);
+    display: grid;
+    grid-template-columns: 90px 37% 37%;
+    grid-template-rows: 80px 95% 200px;
+    grid-template-areas:
+    'lateral menu menu publi'
+    'lateral principal principal publi'
+    'lateral principal principal publi'
+    'rodape rodape rodape rodape';
+}
+@media screen and (min-width: 700px) {
+    .container {
+      grid-template-columns: 1fr 37% 37%;
+    }
+  }
+
+
+
+/*menu*/
+.menu{
+    padding: 20px;
+    text-align: center;
+    
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 60%,rgb(70, 67, 67) 91%);
+    font-family: 'Roboto', sans-serif;
+    grid-area: menu;
+  
+}
+.menu h1{
+    background:linear-gradient(to right, #007dbb23 10%,#323234 60%,rgb(70, 67, 67) 91%);
+    color:#007dbb;
+}
+.menu p{
+    
+    color: aqua;
+}
+.menu p a{
+    color: aqua;
+    text-decoration: none;
+}
+.menu p a:hover{
+    color: #007dbb;
+}
+
+
+
+
+/*barra lateral*/
+.lateral img{
+    background:linear-gradient(to right, #007dbb43 2%,rgba(28,28,34,137) 10%);
+    object-fit: cover;
+    width: 80px;
+    padding: 10px;
+}
+.lateral img:hover{
+    background:linear-gradient(to right, #007dbb43 20%,rgba(28,28,34,137) 91%);
+    
+}
+.lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    background-color: rgba(28,28,34,137);
+    grid-area: lateral;
+    
+}
+nav{
+    
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+
+/*principal*/
+main{
+    font-family: 'Roboto', sans-serif;
+    height:fit-content;
+    width: 100%;
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 60%,rgb(70, 67, 67) 91%);
+}
+
+.principal{
+    padding: 5px;
+    grid-area: principal;
+}
+.principal img{
+    width: 75vw;
+    height: 50vh;
+    padding: 20px;
+    object-fit: contain;
+
+}
+.principal h2{
+    
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+}
+.principal p{
+    padding: 10px;
+    color: rgba(28,28,34,137);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+/*Especificaçoes*/
+.espec{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+.espec section{
+    
+    border:5px solid #007dbb22;
+    border-radius:50px;
+}
+.espec img{
+    object-fit: contain;
+}
+.espec h2{
+    padding: 20px;
+}
+.espec h3{
+    padding: 10px;
+    text-align: center;
+    color:#007dbb
+}
+.espec table{
+    margin: 20px;
+    width: 60vw;
+}
+
+.espec table th{
+    color: #007dbb;
+    border: 2px solid #007dbb43;
+}
+.espec table td{
+    
+    text-align: center;
+    border: 2px solid #007dbb43;
+}
+.espec h3 b{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+/*Visao Geral*/
+
+
+.visao img{
+    object-fit: contain;
+    height: 70vh;
+    width: 72vw;
+}
+.visao h2{
+    margin-top: 100px;
+}
+.visao h3{
+    padding: 20px;
+    color: #007dbb;
+}
+.visao p{
+    margin: 10px;
+    
+}
+.visao p span{
+    color: #007dbb;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+.visao section{
+    border:5px solid #007dbb22;
+    border-radius:50px;
+}
+
+
+
+
+/*publicidade*/
+.publi{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    grid-area: publi;
+    background-color: rgb(70, 67, 67);
+    
+}
+.publi img{
+    object-fit: cover;
+    padding: 2px;
+    height: 50%;
+    width: 100%;
+    /*cover estica o gif*/
+}
+
+
+/*Componentes*/
+.comp{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+.comp h2{
+    padding: 20px;
+}
+.comp section{
+    
+    border:5px solid #007dbb22;
+    border-radius:50px;
+}
+.comp img{
+    object-fit: contain;
+    width: 100%;
+}
+.comp table{
+    margin: 20px;
+    width: 60vw;
+}
+.comp table th{
+    text-align:left;
+    padding: 5px;
+    color: #007dbb;
+    border: 2px solid #007dbbcd;
+}
+.comp table td{
+    text-align: center;
+    border: 2px solid #007dbb43;
+}
+.comp table td a{
+    text-decoration: none;
+    color: white;
+}
+.comp table td a:hover{
+    color:#007dbb;
+}
+
+
+/*Desempenho*/
+.desempenho{
+    margin: 10px;
+}
+
+.desempenho section{
+    
+    border:5px solid #007dbb22;
+    border-radius:50px;
+}
+
+.desempenho h2{
+    padding: 20px;
+}
+
+
+/*Cadastro*/
+.cadastro input, select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.cadastro input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 20px;
+}
+.cadastro input[type=reset]{
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    
+}
+.cadastro input[type=text],[type=email],[type=tel],[type=number],[type=number]{
+    width: 100%;
+}
+
+.cadastro input[type=submit]:hover {
+    background-color: #45a0496d;
+}
+.cadastro input[type=reset]:hover{
+    background-color: rgba(255, 0, 0, 0.444);
+
+}
+  
+.cadastro {
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 70%,rgba(28,28,34,137) 95%);
+    padding: 50px;
+  }
+
+.cadastro label{
+    color: #007dbb;
+
+}
+.cadastro legend{
+    color: white;
+}
+.cadastro h2{
+    padding: 20px;
+}
+.cadastro fieldset{
+    color: white;
+    padding: 20px;
+}
+
+
+
+
+
+
+/*rodape*/
+footer{
+    background:linear-gradient(to right,rgba(28,28,34,137) 20%,#323234 70%,rgba(28,28,34,137) 95%);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 100vw;
+    padding: 30px;
+    align-items: center;
+    
+
+}
+.rodape{
+    grid-area: rodape;
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(28,28,34,137);
+    
+}
+.rodape img{
+    width: 200px;
+}
+
+.links p{
+    text-align: center;
+}
+.links a{
+    color: #007dbb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+footer a:hover{
+    color: #007dbb56;
+}
+
